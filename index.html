@@ -31,9 +31,44 @@
           <h3>
 <a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h3>
 
-<p>Orbit simulator allow you to simulate orbits and positions of space objects in solar system at specific time. Positions of all objects are cumputed from orbital elements. Simulator loads data from external txt file which allows to add new objects (object must be orbiting the Sun). Orbit simulator is written in matlab.</p>
+<p>Orbit simulator allow you to simulate orbits and positions of space objects in solar system at specific time. Positions of all objects are cumputed from orbital elements. Simulator loads data from external txt file which allows to add new objects (object must be orbiting the Sun). Orbit simulator is written in matlab.
+[[<a href="https://github.com/pavellu5/orbit-simulator/blob/master/screenshot.png%7Calt=screenshot">https://github.com/pavellu5/orbit-simulator/blob/master/screenshot.png|alt=screenshot</a>]]</p>
 
-<p><img src="https://github.com/pavellu5/orbit-simulator/blob/master/screenshot.png" alt="screenshot"></p>
+<h2>
+<a id="adding-new-object" class="anchor" href="#adding-new-object" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding new object</h2>
+
+<p>To add a new object just insert six orbital elements, orbit period and some aditional settings (like color and style of orbit line) to file <em>objectsinfo.txt</em>.</p>
+
+<p><strong>Format of data in file:</strong><br>
+1. name
+1. orbital elements (all 6 on 1 line - separeted with space)</p>
+
+<ol>
+<li>a(semi-major axis[AU])</li>
+<li>e(excentricity[deg])</li>
+<li>i(inclination[deg])</li>
+<li>omega(Longitude of ascending node [deg])</li>
+<li>linedOmg(Longitude of perihelion[deg])</li>
+<li>l(Mean Longitude[deg])
+
+<ol>
+<li>orbital period</li>
+<li>show planet on startup (1-yes;0-no)</li>
+<li>color of orbit line (in matlab RGB)</li>
+<li>style of orbit line (- or -- or : or -.)</li>
+<li>%%% (data of one objects endings)</li>
+</ol>
+</li>
+</ol>
+
+<p><strong>Example - Earth</strong><br>
+<code>Earth</code><br>
+<code>1.00000011  0.01671022  0.00005  -11.26064  102.94719  100.46435</code><br>
+<code>365.2</code><br>
+<code>1</code><br>
+<code>0 0 1</code><br>
+<code>-</code><br>
+<code>%%%</code>  </p>
         </section>
 
         <aside id="sidebar">
